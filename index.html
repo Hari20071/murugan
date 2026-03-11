@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>healthcar.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f8fb;
+        }
+
+        header {
+            background-color: #0a66c2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .search-box {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .search-box input {
+            padding: 10px;
+            width: 50%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            padding: 10px;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #0a66c2;
+            color: white;
+            margin-top: 20px;
+        }
+         .bmi-btn {
+            background-color: #0077b6;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .bmi-btn:hover {
+            background-color: #023e8a;
+            transform: scale(1.05);
+        }
+        .containe {
+            width: 80%;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h2 {
+            color: #0077b6;
+        }
+
+        .formula {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-left: 5px solid #0077b6;
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        ul {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>healthcare.com</h1>
+    <p>Your Guide to Common Diseases & Health Information</p>
+</header>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search disease..." onkeyup="searchFunction()">
+</div>
+
+<div class="container">
+
+    <!-- 20 Disease Cards -->
+
+    <div class="card">
+        <a href="fever.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 7.10.32 PM.jpeg" alt="Fever">
+        <h3>1. Fever</h3>
+    </a>
+    </div>
+
+    <div class="card">
+        <a href="Diabetes.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 7.14.23 PM.jpeg" alt="Diabetes">
+        <h3>2. Diabetes</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hypertension.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 5.51.43 PM.jpeg" alt="Hypertension">
+        <h3>3. Hypertension</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="asthma.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 5.53.57 PM.jpeg" alt="Asthma">
+        <h3>4. Asthma</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="influenza.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 7.21.47 PM.jpeg" alt="Influenza">
+        <h3>5. Influenza</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="malaria.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 5.58.50 PM.jpeg" alt="Malaria">
+        <h3>6. Malaria</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="tuberculosis.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.30.11 PM.jpeg" alt="Tuberculosis">
+        <h3>7. Tuberculosis</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="covid.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 7.20.47 PM.jpeg" alt="COVID-19">
+        <h3>8. COVID-19</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="heartdisease.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.00.39 PM.jpeg" alt="Heart Disease">
+        <h3>9. Heart Disease</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="cancer.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 7.40.10 PM.jpeg" alt="Cancer">
+        <h3>10. Cancer</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="arthritis.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.33.18 PM.jpeg" alt="Arthritis">
+        <h3>11. Arthritis</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="migraine.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.41.08 PM.jpeg" alt="Migraine">
+        <h3>12. Migraine</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="dengue.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 7.42.35 PM.jpeg" alt="Dengue">
+        <h3>13. Dengue</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="pneumonia.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.38.30 PM.jpeg" alt="Pneumonia">
+        <h3>14. Pneumonia</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="kidney-disease.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.04.36 PM.jpeg" alt="Kidney Disease">
+        <h3>15. Kidney Disease</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="thyroid-disorder.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.44.37 PM.jpeg" alt="Thyroid Disorder">
+        <h3>16. Thyroid Disorder</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="anemia.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.53.09 PM.jpeg" alt="Anemia">
+        <h3>17. Anemia</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="depression.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.58.36 PM.jpeg" alt="Depression">
+        <h3>18. Depression</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="allergy.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 6.58.36 PM (1).jpeg" alt="Allergy">
+        <h3>19. Allergy</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="ulcer.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-19 at 7.04.56 PM.jpeg" alt="Ulcer">
+        <h3>20. Ulcer</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Chikungunya.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-26 at 3.13.16 PM.jpeg" alt="Chikungunya">
+        <h3>21. Chikungunya</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Typhoid Fever.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-26 at 3.17.15 PM.jpeg" alt="Typhoid Fever">
+        <h3>22. Typhoid Fever</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Cholera.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-26 at 5.39.12 PM.jpeg" alt="Cholera">
+        <h3>23. Cholera</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="hiv.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-26 at 5.47.47 PM.jpeg" alt="HIV/AIDS">
+        <h3>24. HIV/AIDS</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Chickenpox.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-26 at 5.50.56 PM.jpeg" alt="Chickenpox">
+        <h3>25. Chickenpox</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Stroke.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-26 at 5.53.25 PM.jpeg" alt="Stroke">
+        <h3>26. Stroke</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Ebola.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-03-01 at 3.15.58 PM.jpeg" alt="Ebola">
+        <h3>27. Ebola</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Food Poisoning.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-02-26 at 5.56.48 PM.jpeg" alt="Food Poisoning">
+        <h3>28. Food Poisoning</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Rabies.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-03-01 at 3.20.18 PM.jpeg" alt="Rabies">
+        <h3>29. Rabies</h3>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="Measles.html">
+        <img src="C:\Users\Harihara Sudharsan\OneDrive\Desktop\health care website\WhatsApp Image 2026-03-01 at 3.32.44 PM.jpeg" alt="Measles">
+        <h3>30. Measles</h3>
+        </a>
+    </div>
+
+</div>
+<div class="containe">
+
+    <h2>What is BMI?</h2>
+    <p>
+        BMI (Body Mass Index) is a value used to measure whether a person has a healthy body weight 
+        based on their height and weight. It helps to classify individuals as underweight, normal weight,
+        overweight, or obese.
+    </p>
+
+    <h2>How to Calculate BMI?</h2>
+    <p>
+        BMI is calculated by dividing a person’s weight in kilograms by the square of their height in meters.
+    </p>
+
+    <div class="formula">
+        <strong>Formula:</strong><br>
+        BMI = Weight (kg) / Height (m)<sup>2</sup>
+    </div>
+
+    <h2>Example:</h2>
+    <p>
+        If a person weighs 70 kg and their height is 1.75 meters:
+    </p>
+
+    <div class="formula">
+        BMI = 70 / (1.75 × 1.75) = 22.86
+    </div>
+
+    <h2>BMI Categories:</h2>
+    <ul>
+        <li>Below 18.5 – Underweight</li>
+        <li>18.5 – 24.9 – Normal weight</li>
+        <li>25 – 29.9 – Overweight</li>
+        <li>30 and above – Obese</li>
+    </ul>
+    <a href="bmi_calculator.html">
+<button class="bmi-btn">BMI Calculator</button>
+</a>
+
+</div>
+<script>
+function searchFunction() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let products = document.getElementsByClassName("card");
+
+    for (let i = 0; i < products.length; i++) {
+        let title = products[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        if (title.includes(input)) {
+            products[i].style.display = "";
+        } else {
+            products[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
+
+<footer>
+    © 2026 healthcar.com | All Rights Reserved
+</footer>
+
+</body>
+</html>

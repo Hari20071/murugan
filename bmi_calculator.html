@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator - healthcare.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fb;
+            text-align: center;
+            padding: 40px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #023e8a;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+         footer {
+            margin-top: 30px;
+            padding: 15px;
+            text-align: center;
+            border-top: 4px solid blue;
+            background-color: #0077cc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>healthcare.com</h1>
+    <h2>BMI Calculator</h2>
+</header>
+
+
+<div class="container">
+    
+
+    <input type="number" id="weight" placeholder="Enter weight (kg)">
+    <input type="number" id="height" placeholder="Enter height (cm)">
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div id="result"></div>
+</div>
+<footer>
+    © 2026 healthcar.com | All Rights Reserved
+</footer>
+
+<script>
+function calculateBMI() {
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value;
+
+    if(weight === "" || height === "") {
+        document.getElementById("result").innerHTML = "Please enter both values!";
+        return;
+    }
+
+    height = height / 100;  // convert cm to meter
+    var bmi = weight / (height * height);
+    bmi = bmi.toFixed(2);
+
+    var category = "";
+
+    if(bmi < 18.5) {
+        category = "Underweight";
+    }
+    else if(bmi >= 18.5 && bmi < 24.9) {
+        category = "Normal weight";
+    }
+    else if(bmi >= 25 && bmi < 29.9) {
+        category = "Overweight";
+    }
+    else {
+        category = "Obese";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Your BMI is: " + bmi + "<br>Category: " + category;
+}
+</script>
+
+</body>
+</html>
